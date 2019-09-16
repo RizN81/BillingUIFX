@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ScrollPane id="scrollpane" fx:id="scrollpane" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" pannable="true" prefWidth="900.0" vbarPolicy="ALWAYS">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <content>
+          	<fx:include source="menu.fxml"/>
+         </content>
+      </ScrollPane>
+   </top>
+   <left>
+      <VBox id="vbox" style="-fx-border-color: #58D68D;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField id="txtItemSearch" alignment="CENTER" focusColor="#58d68d" promptText="search item" />
+            <JFXListView id="productItemList" fx:id="listView" />
+            <Separator prefWidth="200.0" style="-fx-background-color: #58D68D;" />
+            <JFXTextField id="txtItemTypeSearch" alignment="CENTER" focusColor="#58d68d" promptText="search item type" />
+            <JFXListView id="productItemTypeList" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView id="particularTable" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #58D68D; -fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" style="-fx-border-color: #58D68D;" text="SNO" />
+          <TableColumn prefWidth="203.0" style="-fx-border-color: #58D68D;" text="PARTICULAR" />
+            <TableColumn prefWidth="90.0" style="-fx-border-color: #58D68D;" text="CODE">
+               <columns>
+                  <TableColumn prefWidth="61.0" text="HSN" />
+                  <TableColumn prefWidth="91.0" text="PRODUCT CODE" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="40.0" style="-fx-border-color: #58D68D;" text="QTY" />
+            <TableColumn prefWidth="85.0" style="-fx-border-color: #58D68D;" text="RATE" />
+            <TableColumn prefWidth="264.0" style="-fx-border-color: #58D68D;" text="AMOUNT" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ScrollPane id="bottomSP" hbarPolicy="ALWAYS" prefHeight="96.0" prefWidth="968.0" style="-fx-border-color: #58D68D; -fx-background-color: #58D68D;" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <content>
+            <FlowPane id="detailsFlow" hgap="5.0" prefHeight="200.0" prefWidth="962.0" prefWrapLength="700.0" rowValignment="TOP" style="-fx-background-color: #58D68D;" vgap="5.0">
+               <children>
+                  <JFXTextField id="txtCustomerName" focusColor="#58d68d" prefHeight="25.0" prefWidth="270.0" promptText="customer name" style="-fx-background-color: #fff;">
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXTextField>
+                  <Label prefHeight="34.0" prefWidth="101.0" text="Invoice Date:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker id="invoiceDate" defaultColor="BLACK" prefHeight="25.0" prefWidth="223.0" promptText="select a date">
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXDatePicker>
+                  <Label prefHeight="34.0" prefWidth="101.0" text="Invoice No">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField id="txtInvoiceNo" editable="false" focusColor="#58d68d" prefHeight="25.0" prefWidth="200.0" promptText="#invoice" style="-fx-background-color: #fff;">
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXTextField>
+                  <JFXButton id="btnPrint" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="82.0" ripplerFill="#a5a7a6" style="-fx-background-color: #FFF;" text="PRINT" textFill="#17202a" underline="true" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXButton>
+                  <JFXButton id="btnNew" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="82.0" ripplerFill="#a5a7a6" style="-fx-background-color: #FFF;" text="NEW" textFill="#17202a" underline="true" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXButton>
+                  <JFXButton id="btnAddCustomer" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="#a5a7a6" style="-fx-background-color: #FFF;" text="ADD CUSTOMER" textFill="#17202a" underline="true" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <FlowPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </FlowPane.margin>
+                  </JFXButton>
+               </children>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+   </bottom>
+   <right>
+      <VBox id="rightVbox" prefHeight="247.0" prefWidth="148.0" style="-fx-border-color: #58D68D;" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="147.0" text="Total Amount:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField id="txtTotalAmount" fx:id="txtTotalAmount" editable="false" focusColor="#58d68d" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Rs 0.0" style="-fx-background-color: #fff;" />
+            <Separator prefWidth="200.0" style="-fx-background-color: #58D68D;" VBox.vgrow="ALWAYS" />
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="147.0" text="Balance:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField id="txtBalance" fx:id="txtBalance" editable="false" focusColor="#58d68d" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Rs 0.0" style="-fx-background-color: #fff;" />
+            <Separator prefWidth="200.0" style="-fx-background-color: #58D68D;" VBox.vgrow="ALWAYS" />
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="147.0" text="Amount Paid:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField id="txtAmountPaid" fx:id="txtAmountPaid" focusColor="#58d68d" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Rs 0.0" style="-fx-background-color: #fff;" />
+            <Separator prefWidth="200.0" style="-fx-background-color: #58D68D;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

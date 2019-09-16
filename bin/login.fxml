@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="665.0" style="-fx-background-color: #58D68D;" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1">
+		<children>
+				<StackPane id="sp1" layoutX="14.0" layoutY="57.0" prefHeight="150.0" prefWidth="200.0" />
+				<StackPane id="sp2" layoutX="234.0" layoutY="57.0" prefHeight="150.0" prefWidth="200.0" />
+				<StackPane id="sp3" layoutX="451.0" layoutY="57.0" prefHeight="150.0" prefWidth="200.0" />
+				<Label alignment="CENTER" layoutX="1.0" prefHeight="15.0" prefWidth="665.0" styleClass="h2" text="iInventroy System" />
+				<Separator layoutX="1.0" layoutY="44.0" prefHeight="13.0" prefWidth="665.0" />
+		</children>
+</Pane>
